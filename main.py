@@ -393,13 +393,13 @@ dispatcher.add_handler(MessageHandler(Filters.document, documnetHandler))
 
 
 
-PORT = int(os.environ.get('PORT', '443'))
-HOOK_URL = 'YOUR-CODECAPSULES-URL-HERE' + '/' + key_token
-updater.start_webhook(listen='0.0.0.0', port=PORT, url_path=key_token, webhook_url=HOOK_URL)
-updater.idle()
-
-# updater.start_polling()
+# PORT = int(os.environ.get('PORT', '443'))
+# HOOK_URL = 'YOUR-CODECAPSULES-URL-HERE' + '/' + key_token
+# updater.start_webhook(listen='0.0.0.0', port=PORT, url_path=key_token, webhook_url=HOOK_URL)
 # updater.idle()
+
+updater.start_polling()
+updater.idle()
 
 
 
